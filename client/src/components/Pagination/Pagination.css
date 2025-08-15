@@ -1,0 +1,52 @@
+.pagination{
+    margin: 20px 0;
+}
+
+.pagination-wrapper{
+    color: var(--white);
+    font-family: var(--playfair);
+    margin: 0 auto;
+    width: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-black);
+    text-align: center;
+}
+
+.page{
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .4s ease;
+    cursor: pointer;
+}
+
+.page-left-icon,.page-right-icon{
+    padding: 19px;
+}
+
+@media screen and (min-width:540px) {
+    .page{
+        padding: 20px;
+    }
+
+    .page-left-icon,.page-right-icon{
+        padding: 24px;
+    }
+}
+
+.page:not(:last-child){
+    border-right: 1px solid rgba(255, 255, 255, .1);
+}
+
+.page:hover,.page.current{
+    background-color: var(--golden);
+}
+
+.page.disabled{
+    cursor: not-allowed;
+    opacity: .2;
+}

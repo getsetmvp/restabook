@@ -1,0 +1,120 @@
+.review-item{
+    transition: all .3s ease;
+    transform: scale(.8);
+    position: relative;
+}
+
+.swiper-slide-active .review-item{
+    transform: scale(1);
+}
+
+.review-item::after{
+    position: absolute;
+    content: '\25CF\25CF\25CF';
+    width: 50px;
+    left: 50%;
+    bottom: 30px;
+    margin-left: -25px;
+    font-size: 9px;
+    color: var(--golden);
+    letter-spacing: 4px;
+}
+
+.review-item-image{
+    position: relative;
+    left: 50%;
+    top: 45px;
+    width: 90px;
+    height: 90px;
+    margin-left: -45px;
+    z-index: 20;
+    border-radius: 100%;
+}
+
+.review-item-image img{
+    height: 90px;
+    width: 90px;
+    border-radius: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.review-item-image::before{
+    position: absolute;
+    content: '';
+    border-radius: 100%;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    top: -8px;
+    border: 1px solid var(--grey100);
+}
+
+.review-item-details{
+    position: relative;
+    padding: 70px 50px 75px;
+    overflow: hidden;
+    transition: all .3s ease;
+    border: 1px solid var(--grey100);
+    background-color: var(--grey50);
+    text-align: center;
+}
+
+.swiper-slide-active .review-item-details{
+    background-color: var(--white);
+}
+
+.review-item-details .quote-icon{
+    position: absolute;
+    color: var(--golden);
+    font-size: 32px;
+    transition: all .4s ease;
+}
+
+.review-item-details .quote-top{
+    top: 20px;
+    left: 25px;
+}
+
+.review-item-details .quote-bottom{
+    bottom: 20px;
+    right: 25px;
+}
+
+.review-name{
+    font-weight: 600;
+    font-family: var(--playfair);
+    font-size: 18px;
+    padding-bottom: 20px;
+}
+
+.review-ratings{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    color: var(--golden);
+}
+
+.review-review{
+    color: var(--grey500);
+    font-size: 15px;
+    font-family: var(--playfair);
+    font-style: italic;
+    line-height: 24px;
+    padding-bottom: 10px;
+    font-weight: 500;
+}
+
+.review-item-no{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    font-family: var(--playfair);
+    font-size: 18px;
+    color: var(--black);
+}
+
+.swiper-slide-active .review-item-no{
+    color: var(--golden);
+}

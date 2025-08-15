@@ -1,0 +1,81 @@
+.my-orders{
+
+}
+
+.my-orders-table{
+    width: 100%;
+    border: 1px solid #eee;
+}
+
+@media screen and (max-width:767px) {
+    .hidden-xs{
+     display: none;
+    }
+}
+
+.my-orders-table{
+    width: 100%;
+    border: 1px solid #eee;
+}
+
+.my-orders-table tr{
+    cursor: pointer;
+    transition: all .4s ease;
+}
+
+.my-orders-table tr:hover td,.my-orders-table tr:hover td:nth-child(odd){
+    background-color: var(--golden);
+    color: var(--white);
+}
+
+.my-orders-table th{
+    padding: 12px;
+    border: 1px solid #eee;
+}
+
+.my-orders-table th:nth-child(odd){
+    background-color: #f9f9f9;
+}
+
+.my-orders-table td{
+    padding: 12px;
+    border: 1px solid #eee;
+    margin: auto;
+}
+
+@media screen and (max-width:560px) {
+    .my-orders-table th{
+        padding: 12px 8px;
+        border: 1px solid #eee;
+    }
+    
+    .my-orders-table td{
+        padding: 12px 8px;
+        border: 1px solid #eee;
+        margin: auto;
+    }
+}
+
+.my-orders-table td:nth-child(odd){
+    background-color: #f9f9f9;
+}
+
+.order-id{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+.order-price,.order-date{
+    font-size: 18px;
+    font-family: var(--playfair);
+    min-width: 70px;
+    text-align: center;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.order-delivery,.order-payment{
+    text-transform: capitalize;
+    text-align: center;
+}

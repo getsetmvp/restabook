@@ -1,0 +1,43 @@
+.image-background{
+    position: relative;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    padding: 210px 0 120px;
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 50px;
+    background-attachment: fixed;
+}
+
+.image-background-title{
+    font-size: 26px;
+    font-family: var(--playfair);
+    font-weight: 900;
+}
+
+@media screen and (min-width:560px) {
+    .image-background-title{
+        font-size: 38px;
+    }
+}
+
+.image-background-text{
+    color: var(--golden);
+    font-size: 18px;
+    font-family: var(--playfair);
+    font-style: italic;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+
+.dots{
+    margin: 10px 0 30px;
+}
+
+.dots::after{
+    color: var(--golden);
+    content: '\25CF\25CF\25CF\25CF\25CF\25CF';
+    font-size: 7px;
+    letter-spacing: 4px;
+}

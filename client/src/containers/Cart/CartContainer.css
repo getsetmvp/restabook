@@ -1,0 +1,11 @@
+#cart{
+    position: relative;
+    padding:70px 0;
+}
+
+@media screen and (min-width:560px) {
+    #cart{
+        padding: 100px 0;
+    }
+}
+

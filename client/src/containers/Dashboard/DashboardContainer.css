@@ -1,0 +1,35 @@
+.dashboard{
+    padding: 70px 0;
+}
+
+.dashboard-tab{
+    cursor: pointer;
+    width: 100%;
+    padding: 15px 18px;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    transition: all .4s ease;
+    margin-bottom: 10px;
+}
+
+.dashboard-tab.selected,.dashboard-tab:hover{
+    background-color: var(--golden);
+    color: var(--white);
+}
+
+.dashboard-section{
+    padding: 50px 0;
+}
+
+@media screen and (min-width:1064px) {
+    .dashboard-section{
+        padding: 0;
+    }
+}
+
+.dashboard-section-title{
+    font-size: 25px;
+    margin-bottom: 20px;
+    font-family: var(--playfair);
+    padding: .5rem;
+}

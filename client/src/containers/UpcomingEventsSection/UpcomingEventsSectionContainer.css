@@ -1,0 +1,116 @@
+#upcoming-events{
+    width: 100%;
+}
+
+.events-container{
+    background: #292929;
+    padding: 120px 50px;
+    position: relative;
+    background-image: url(../../assets/images/all/events_frame.png);
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+.events-container::before{
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border: 1px dashed rgba(255, 255, 255, .2);
+    z-index: -1;
+    box-shadow: 0 0 0 50px rgb(255 255 255/ 3%);
+}
+
+@media screen and (min-width:425px) {
+    .events-container::before{
+        top: 50px;
+        left: 50px;
+        right: 50px;
+        bottom: 50px;
+    }
+}
+
+
+.dot-seperator{
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto 50px;
+    position: relative;
+}
+
+.dot-seperator span{
+    width: 6px;
+    height: 6px;
+    display: inline-table;
+    background-color: var(--white);
+    margin: 0 auto;
+    border-radius: 100%;
+}
+
+.dot-seperator::before,.dot-seperator::after{
+    content: '';
+    position: absolute;
+    width: 30%;
+    height: 1px;
+    top: 50%;
+    background-color: var(--golden);
+    opacity: .3;
+}
+
+.dot-seperator::before{
+    left: 0;
+}
+
+.dot-seperator::after{
+    right: 0;
+}
+
+.store-container{
+    background-size: cover;
+    background-image: linear-gradient(to right,rgba(0,0,0,0.5), rgba(0,0,0,0.5)) , url(../../assets/images/all/6.jpg);
+    background-position: center;
+    padding: 90px 0;
+    text-align: center;
+}
+
+@media screen and (min-width:1064px) {
+    .store-container{
+        height: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.store-title{
+    font-size: 35px;
+    font-family: var(--playfair);
+    position: relative;
+    padding-bottom: 20px;
+    color: var(--golden);
+}
+
+.store-title::after{
+    position: absolute;
+    content: '\25CF\25CF\25CF';
+    width: 50px;
+    left: 50%;
+    top: -20px;
+    margin-left: -25px;
+    font-size: 9px;
+    letter-spacing: 4px;
+    color: var(--white);
+}
+
+.store-text{
+    font-size: 21px;
+    font-style: italic;
+    font-family: var(--playfair);
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    color: var(--white);
+}

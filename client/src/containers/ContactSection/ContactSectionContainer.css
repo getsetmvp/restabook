@@ -1,0 +1,46 @@
+#contact{
+    position: relative;
+    padding: 140px 0;
+}
+
+.section-bg-image{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 400px;
+    overflow: hidden;
+    opacity: .4;
+    z-index: -1;
+}
+
+.get-in-touch-title{
+    font-size: 30px;
+    font-weight: 900;
+    color: #323246;
+    font-family: var(--playfair);
+}
+
+.get-in-touch-dots-seperator{
+    margin: 10px 0 30px;
+    position: relative;
+}
+
+.get-in-touch-dots-seperator::after{
+    content: '\25CF\25CF\25CF\25CF\25CF\25CF';
+    position: absolute;
+    font-size: 7px;
+    letter-spacing: 4px;
+}
+
+.get-in-touch-title-text{
+    font-size: 13px;
+    line-height: 24px;
+    padding-bottom: 10px;
+    font-weight: 400;
+    color: #5e646a;
+}
+
+.contact-form-container{
+    margin-top: 40px;
+}

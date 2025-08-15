@@ -1,0 +1,126 @@
+#special-menu{
+    position: relative;
+    background-image: linear-gradient(to right, rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(../../assets/images/all/7.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 120px 0;
+}
+
+.category-tabs{
+    position: relative;
+    padding: 0 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.category-tab-item{
+    margin: 0 20px;
+    color: var(--white);
+    font-family: var(--playfair);
+    font-size: 18px;
+    position: relative;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+
+.category-tab-item.selected{
+    color: var(--golden);
+}
+
+@media screen and (min-width:1064px) {
+    .category-tabs{
+        margin-top: 20px;
+        padding: 40px 30px 50px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .category-tabs::before{
+        position: absolute;
+        content: '';
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 1px;
+        background-color: rgba(255, 255, 255, .5);
+    }
+
+    .category-tab-item{
+        width: 100%;
+        margin-bottom: 28px;
+        text-align: left;
+    }
+}
+
+.menu-items{
+    margin-top: 50px;
+    padding-left: 80px;
+    position: relative;
+}
+
+.menu-item{
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.menu-item-title{
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.menu-item-title span{
+    position: absolute;
+    left: -60px;
+    top: 0;
+    font-family: var(--playfair);
+    color: var(--golden);
+}
+
+.menu-item-title-line{
+    position: absolute;
+    border-bottom: 1px dotted rgba(204, 204, 204, 0.2);
+    bottom: -5px;
+    right: 0px;
+    left: 0px;
+}
+
+.menu-item-price{
+    float: right;
+    color: var(--golden);
+    font-size: 18px;
+    position: relative;
+    top: -4px;
+    font-family: var(--playfair);
+}
+
+.menu-item-desc{
+    color: rgba(255, 255, 255, 0.8);
+    text-align: left;
+    max-width: 400px;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 24px;
+    padding-bottom: 10px;
+}
+
+@media screen and (max-width:560px) {
+    .menu-items{
+        padding-left: 50px;
+    }
+
+    .menu-item-title span{
+        left: -40px;
+    }
+    
+    .menu-item-price{
+        float:none;
+        top: 2px;
+    }
+}

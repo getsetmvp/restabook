@@ -1,0 +1,74 @@
+.my-reservations{
+
+}
+
+.my-reservations-table{
+    width: 100%;
+    border: 1px solid #eee;
+}
+
+@media screen and (max-width:767px) {
+    .hidden-xs{
+     display: none;
+    }
+}
+
+.my-reservations-table{
+    width: 100%;
+    border: 1px solid #eee;
+}
+
+.my-reservations-table tr{
+    cursor: pointer;
+    transition: all .4s ease;
+}
+
+.my-reservations-table tr:hover td,.my-reservations-table tr:hover td:nth-child(odd){
+    background-color: var(--golden);
+    color: var(--white);
+}
+
+.my-reservations-table th{
+    padding: 12px;
+    border: 1px solid #eee;
+}
+
+.my-reservations-table th:nth-child(odd){
+    background-color: #f9f9f9;
+}
+
+.my-reservations-table td{
+    padding: 12px;
+    border: 1px solid #eee;
+    margin: auto;
+}
+
+@media screen and (max-width:560px) {
+    .my-reservations-table th{
+        padding: 12px 8px;
+        border: 1px solid #eee;
+    }
+    
+    .my-reservations-table td{
+        padding: 12px 8px;
+        border: 1px solid #eee;
+        margin: auto;
+    }
+}
+
+.my-reservations-table td:nth-child(odd){
+    background-color: #f9f9f9;
+}
+
+.reservation-name{
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.reservation-date,.reservation-persons,.reservation-time{
+    font-size: 18px;
+    font-family: var(--playfair);
+    padding-left: 18px;
+    text-align: center;
+    padding-right: 18px;
+}

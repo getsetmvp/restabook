@@ -1,0 +1,29 @@
+.order-success-container{
+    padding: 70px 0;
+    text-align: center;
+}
+
+.order-success-icon{
+    text-align: center;
+    font-size: 150px;
+    color: var(--golden);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.order-success-title{
+    font-size: 25px;
+    font-family: var(--playfair);
+    font-weight: 700;
+    letter-spacing: .5px;
+    margin-bottom: 15px;
+}
+
+.order-success-text{
+    font-size: 18px;
+    color: var(--grey400);
+    font-weight: 500;
+    margin-bottom: 10px;
+}

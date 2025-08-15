@@ -1,0 +1,56 @@
+#restaurant-numbers{
+    position: relative;
+    padding: 120px 0;
+    background-image: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(../../assets/images/all/12.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.counter-items{
+    display: flex;
+    flex-direction: column;
+}
+
+.counter-item{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.counter-item-no{
+    color: var(--golden);
+    font-family: var(--playfair);
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.counter-item-title{
+    padding-top: 20px;
+    font-weight: 600;
+    position: relative;
+    color: var(--white);
+}
+
+.counter-item-title::after{
+    position: absolute;
+    content: '\25CF\25CF\25CF';
+    width: 50px;
+    left: 50%;
+    bottom: -20px;
+    margin-left: -25px;
+    font-size: 6px;
+    letter-spacing: 4px;
+    color: var(--golden);
+}
+
+@media screen and (min-width: 768px) {
+    .counter-items{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .counter-item{
+        margin: 0 20px;
+    }
+}

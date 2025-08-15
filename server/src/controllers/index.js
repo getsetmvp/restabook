@@ -1,0 +1,11 @@
+module.exports.authController = require('./auth.controller');
+module.exports.seedController = require('./seed.controller');
+module.exports.userController = require('./user.controller');
+module.exports.productController = require('./product.controller');
+module.exports.reviewController = require('./review.controller');
+module.exports.contactController = require('./contact.controller');
+module.exports.cartController = require('./cart.controller');
+module.exports.checkoutController = require('./checkout.controller');
+module.exports.orderController = require('./order.controller');
+module.exports.reservationController = require('./reservation.controller');
+module.exports.webhookController = require('./webhook.controller');

@@ -1,0 +1,33 @@
+.dot-seperator{
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto 50px;
+    position: relative;
+}
+
+.dot-seperator span{
+    width: 6px;
+    height: 6px;
+    display: inline-table;
+    background-color: var(--black);
+    margin: 0 auto;
+    border-radius: 100%;
+}
+
+.dot-seperator::before,.dot-seperator::after{
+    content: '';
+    position: absolute;
+    width: 30%;
+    height: 1px;
+    top: 50%;
+    background-color: var(--golden);
+    opacity: .3;
+}
+
+.dot-seperator::before{
+    left: 0;
+}
+
+.dot-seperator::after{
+    right: 0;
+}

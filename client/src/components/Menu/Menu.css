@@ -1,0 +1,25 @@
+.menu{
+    z-index: 1000001;
+    background-color: var(--white);
+    height: max-content;
+    min-width: 200px;
+    width: 20%;
+    position: absolute;
+    transition: all .5s ease;
+}
+
+.menu.menu-left{
+    left: -100%;
+}
+
+.menu.menu-right{
+    right: -100%;
+}
+
+.menu.menu-left.menu-open{
+    left: 0;
+}
+
+.menu.menu-right.menu-open{
+    right: 0;
+}

@@ -1,0 +1,83 @@
+.reservation-container{
+    background: #292929;
+    padding: 120px 50px;
+    position: relative;
+    background-image: url(../../assets/images/all/opening_hours_frame.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.reservation-container::before{
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border: 1px dashed rgba(255, 255, 255, .2);
+    z-index: 0;
+    box-shadow: 0 0 0 50px rgb(255 255 255/ 3%);
+}
+
+@media screen and (min-width:425px) {
+    .reservation-container::before{
+        top: 50px;
+        left: 50px;
+        right: 50px;
+        bottom: 50px;
+    }
+}
+
+.work-time{
+    position: relative;
+}
+
+.work-time::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -5px;
+    width: 10px;
+    bottom: 20px;
+    background: url(../../assets/images/seperator.png) repeat-y;
+}
+
+.work-days{
+    font-family: var(--playfair);
+    color: var(--golden);
+}
+
+.work-hours{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 30px;
+    padding-bottom: 20px;
+    color: var(--white);
+}
+
+.reservation-contact-no{
+    position: relative;
+    margin: 20px auto 0;
+    width: max-content;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    font-family: var(--playfair);
+    transition: all .5s ease;
+    border: 1px solid var(--golden);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.reservation-contact-no:hover{
+    background-color: var(--golden);
+}
+
+
+@media screen and (min-width:425px) {
+    .reservation-contact-no{
+        font-size: 28px;
+    }
+}
