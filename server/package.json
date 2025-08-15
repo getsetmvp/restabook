@@ -1,6 +1,8 @@
 {
-  "name": "express-boilerplate",
+  "name": "restabook-server",
   "version": "0.1.0",
+  "description": "Restaurant booking and food ordering platform - Server API",
+  "main": "src/index.js",
   "engines": {
     "node": ">=22.0.0"
   },
@@ -22,27 +24,31 @@
     "heroku:prod": "heroku git:remote restabook-api && git push heroku main"
   },
   "keywords": [
-    "node",
-    "node.js",
-    "boilerplate",
-    "generator",
-    "express",
-    "rest",
+    "restaurant",
+    "booking",
+    "food",
+    "ordering",
     "api",
+    "node",
+    "express",
     "mongodb",
     "mongoose",
-    "es6",
-    "es7",
-    "es8",
-    "es9",
-    "jest",
-    "travis",
-    "docker",
-    "passport",
-    "joi",
-    "eslint",
-    "prettier"
+    "restabook",
+    "restaurant-management",
+    "table-reservation",
+    "rest",
+    "api",
+    "jwt",
+    "passport"
   ],
+  "author": "GetSetMVP",
+  "license": "MIT",
+  "homepage": "https://restabook.onrender.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/getsetmvp/restabook.git",
+    "directory": "server"
+  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "compression": "^1.7.4",
