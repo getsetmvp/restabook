@@ -13,10 +13,10 @@ services:
       - restabook-network
     healthcheck:
       test: ["CMD", "node", "healthcheck.js"]
-      interval: 30s
-      timeout: 10s
+      interval: 10m
+      timeout: 30s
       retries: 3
-      start_period: 60s
+      start_period: 2m
 
 networks:
   restabook-network:
