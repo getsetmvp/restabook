@@ -1,15 +1,31 @@
+# Use Node.js 22 Alpine for smaller image size
 FROM node:22-alpine
 
-RUN mkdir -p /usr/src/node-app && chown -R node:node /usr/src/node-app
+# Create app directory
+WORKDIR /usr/src/app
 
-WORKDIR /usr/src/node-app
+# Create non-root user for security
+RUN addgroup -g 1001 -S nodejs && adduser -S nodejs -u 1001
 
-COPY package.json yarn.lock ./
+# Copy package files
+COPY package*.json ./
 
-USER node
+# Install dependencies using npm
+RUN npm ci --only=production && npm cache clean --force
 
-RUN yarn install --pure-lockfile
+# Copy source code
+COPY . .
 
-COPY --chown=node:node . .
+# Change ownership to nodejs user
+RUN chown -R nodejs:nodejs /usr/src/app
+USER nodejs
 
+# Expose port
 EXPOSE 3000
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
+  CMD node healthcheck.js
+
+# Start the application using PM2
+CMD ["npm", "start"]

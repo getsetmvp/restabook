@@ -1,0 +1,57 @@
+name: Deploy to OCI VM
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: "Type 'yes' to confirm deployment to OCI"
+        required: true
+        default: "no"
+  push:
+    branches: [ main ]
+    paths: [ 'server/**' ]
+
+jobs:
+  deploy:
+    if: ${{ github.event.inputs.confirm == 'yes' || github.event_name == 'push' }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.OCI_SSH_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H ${{ secrets.OCI_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Deploy to OCI
+        run: |
+          ssh ${{ secrets.OCI_USER }}@${{ secrets.OCI_HOST }} "
+            # Setup sparse checkout for server folder only
+            if [ ! -d ~/restabook ]; then
+              echo 'Setting up sparse checkout for server folder only...'
+              git clone --no-checkout https://github.com/getsetmvp/restabook.git ~/restabook
+              cd ~/restabook
+              git sparse-checkout init --cone
+              git sparse-checkout set server
+              git checkout main
+            else
+              echo 'Updating server code...'
+              cd ~/restabook
+              git pull origin main
+            fi
+            
+            # Navigate to server directory and deploy
+            cd ~/restabook/server &&
+            echo 'Current directory contents:' &&
+            ls -la &&
+            [ -f docker-compose.yml ] && docker-compose down;
+            docker-compose up -d --build &&
+            echo 'Waiting for application to start...' &&
+            sleep 30 &&
+            docker-compose ps &&
+            curl -f http://localhost:3000/v1/health && echo 'Deployment successful!' || echo 'Health check failed'
+          "

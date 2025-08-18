@@ -9,6 +9,9 @@ mongoose.connect(config.mongoose.url, config.mongoose.options).then(() => {
   server = app.listen(config.port, () => {
     logger.info(`Listening to port ${config.port}`);
   });
+}).catch((error) => {
+  logger.error('Failed to connect to MongoDB:', error);
+  process.exit(1);
 });
 
 const exitHandler = () => {

@@ -10,12 +10,17 @@ const checkoutRoute = require('./checkout.route');
 const orderRoute = require('./order.route');
 const reservationRoute = require('./reservation.route');
 const webhookRoute = require('./webhook.route');
+const healthRoute = require('./health.route');
 const docsRoute = require('./docs.route');
 const config = require('../../config/config');
 
 const router = express.Router();
 
 const defaultRoutes = [
+  {
+    path: '/health',
+    route: healthRoute,
+  },
   {
     path: '/seed',
     route: seedRoute,
